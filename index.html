@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for charset and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP Hymn - Single Page Website</title>
+    <link rel="stylesheet" href="style.css?v=20260309f">
+</head>
+
+<body>
+
+    <!-- Header section with logo and title -->
+    <header class="main_header">
+        <div class="logo_container">
+            <img src="pup_logo.png" alt="PUP Logo" class="logo">
+            <h1>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
+        </div>
+    </header>
+
+    <!-- Main content area with hymn lyrics and audio -->
+    <main class="content">
+        <section class="hero_panel">
+            <h2 class="hymn_title">PUP HYMN</h2>
+
+            <div class="lyrics_container">
+                <div class="lyrics_content">
+                    <p><span>Sintang</span> <span>Paaralan</span></p>
+                    <p><span>Tanglaw</span> <span>ka</span> <span>ng</span> <span>bayan</span></p>
+                    <p><span>Pandayan</span> <span>ng</span> <span>isip</span> <span>ng</span> <span>kabataan</span></p>
+                    <p><span>Kami</span> <span>ay</span> <span>dumating</span> <span>nang</span> <span>salat</span> <span>sa</span> <span>yaman</span></p>
+                    <p><span>Hanap</span> <span>na</span> <span>dunong</span> <span>ay</span> <span>iyong</span> <span>alay</span></p>
+                    <p><span>Ang</span> <span>layunin</span> <span>mong</span> <span>makatao</span></p>
+                    <p><span>Dinarangal</span> <span>ang</span> <span>Pilipino</span></p>
+                    <p><span>Ang</span> <span>iyong</span> <span>aral,</span> <span>diwa,</span> <span>adhikang</span> <span>taglay</span></p>
+                    <p><span>PUP,</span> <span>aming</span> <span>gabay</span></p>
+                    <p><span>Paaralang</span> <span>dakila</span></p>
+                    <p><span>PUP,</span> <span>pinagpala</span></p>
+                    <p><span>Gagamitin</span> <span>ang</span> <span>karunungan</span></p>
+                    <p><span>Mula</span> <span>sa</span> <span>iyo,</span> <span>para</span> <span>sa</span> <span>bayan</span></p>
+                    <p><span>Ang</span> <span>iyong</span> <span>aral,</span> <span>diwa,</span> <span>adhikang</span> <span>taglay</span></p>
+                    <p><span>PUP,</span> <span>aming</span> <span>gabay</span></p>
+                    <p><span>Paaralang</span> <span>dakila</span></p>
+                    <p><span>PUP,</span> <span>pinagpala</span></p>
+                </div>
+            </div>
+
+            <!-- Audio player for PUP hymn -->
+            <div class="audio_wrapper">
+                <div class="audio_controls">
+                    <button class="skip_btn" id="rewindBtn" title="Back 10 seconds" aria-label="Back 10 seconds">
+                        <span class="skip_icon">&#8630;</span>
+                        <span class="skip_label">-10s</span>
+                    </button>
+                    <audio controls class="custom_audio">
+                        <source src="pup_hymn.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="skip_btn" id="forwardBtn" title="Forward 10 seconds" aria-label="Forward 10 seconds">
+                        <span class="skip_icon">&#8631;</span>
+                        <span class="skip_label">+10s</span>
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with copyright -->
+    <footer class="main_footer">
+        <p>Copyright &copy; 2017 Polytechnic University of the Philippines</p>
+    </footer>
+
+    <!-- Karaoke script -->
+    <script src="script.js?v=20260309f"></script>
+
+</body>
+</html>

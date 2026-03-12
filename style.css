@@ -1,0 +1,234 @@
+﻿:root {
+    --pup-red: #8f0000;
+    --pup-dark-red: #5f0000;
+    --pup-gold: #f6c73d;
+    --panel-border: rgba(255, 255, 255, 0.18);
+    --text-main: #f8f9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background:
+        linear-gradient(180deg, rgba(10, 10, 24, 0.45) 0%, rgba(10, 10, 24, 0.72) 100%),
+        url("background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+}
+
+.main_header {
+    background: linear-gradient(90deg, #ca0000 0%, var(--pup-red) 55%, #220000 100%);
+    color: white;
+    padding: 14px 20px;
+    border-bottom: 3px solid var(--pup-gold);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 52px;
+    margin-right: 14px;
+}
+
+.main_header h1 {
+    font-size: clamp(0.92rem, 2vw, 1.45rem);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 16px;
+}
+
+.hero_panel {
+    width: min(920px, 100%);
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 22px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    padding: clamp(18px, 3vw, 30px);
+}
+
+.hymn_title {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    color: #fffdf2;
+}
+
+.lyrics_container {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.06));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    height: min(360px, 52vh);
+    margin: 0 auto;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.lyrics_content p {
+    font-size: clamp(1rem, 2.2vw, 1.16rem);
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.94);
+    margin-bottom: 6px;
+    transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
+    text-align: center;
+}
+
+.lyrics_content p.active {
+    color: rgba(255, 255, 255, 0.98);
+    font-weight: 700;
+    transform: scale(1.02);
+}
+
+.lyrics_content p span {
+    transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+
+.lyrics_content p span.active {
+    color: #ffe58c;
+    text-shadow: 0 0 10px rgba(249, 215, 28, 0.72), 0 0 22px rgba(249, 215, 28, 0.45);
+}
+
+.lyrics_container::-webkit-scrollbar {
+    width: 9px;
+}
+
+.lyrics_container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.lyrics_container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #cd1a1a, #7d0000);
+    border-radius: 10px;
+}
+
+.audio_wrapper {
+    margin-top: 18px;
+}
+
+.audio_controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 18px);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.custom_audio {
+    width: 100%;
+    border-radius: 999px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.skip_btn {
+    border: 2px solid rgba(246, 199, 61, 0.95);
+    background: radial-gradient(circle at top, #b21010, var(--pup-dark-red));
+    color: white;
+    width: 68px;
+    min-width: 68px;
+    height: 68px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.16s ease, filter 0.16s ease, box-shadow 0.16s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.skip_icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.skip_label {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.skip_btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.skip_btn:active {
+    transform: scale(0.96);
+}
+
+.skip_btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.main_footer {
+    padding: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 640px) {
+    .main_header {
+        padding: 12px 14px;
+    }
+
+    .logo {
+        height: 42px;
+    }
+
+    .hero_panel {
+        border-radius: 16px;
+        padding: 14px;
+    }
+
+    .lyrics_container {
+        padding: 16px;
+        height: 44vh;
+    }
+
+    .audio_controls {
+        gap: 8px;
+    }
+
+    .skip_btn {
+        width: 58px;
+        min-width: 58px;
+        height: 58px;
+    }
+
+    .skip_label {
+        font-size: 0.78rem;
+    }
+}
