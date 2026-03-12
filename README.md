@@ -20,7 +20,7 @@
 
 | Feature | Description |
 |--------|-------------|
-| 🎼 **Lyric Sync** | Highlights active lyric lines based on audio playback time |
+| 🎼 **Lyric Sync** | Highlights active lyric lines and **individual words** in real-time |
 | 🔽 **Auto-Scroll Lyrics** | Smoothly scrolls the lyric panel to keep the current line centered |
 | ⏩ **Skip Controls** | Jumps backward or forward by 10 seconds |
 | 🖱️ **Clickable Lyrics** | Click any lyric line to seek playback to that timestamp |
@@ -31,15 +31,14 @@
 ## 📁 Project Structure
 
 ```text
-WMS/
-|
+.
 |-- index.html      # Main page layout and lyrics content
 |-- style.css       # Visual design, responsive styling, and controls UI
 |-- script.js       # Audio timing logic, lyric highlight, and auto-scroll behavior
 |-- background.png  # Background image
 |-- pup_logo.png    # Header logo
 |-- pup_hymn.mp3    # Hymn audio source
-|-- reference.jpg   # Reference image asset
+|-- reference.jpg   # Reference image from professor
 `-- README.md
 ```
 
@@ -50,7 +49,7 @@ WMS/
 ### 1. Clone the repository
 ```bash
 git clone <your-repo-url>
-cd WMS
+cd pup-hymn-karaoke-webpage-player
 ```
 
 ### 2. Open the project
@@ -86,8 +85,8 @@ Playback controls:
 ## ✅ Implementation Notes
 
 ```text
-✔ Timed lyric mapping      -> start/end windows defined in script.js
-✔ Dynamic highlight state  -> .active class applied to current line(s)
+✔ Per-word timing mapping -> each lyric word is synced with audio
+✔ Dynamic highlight state  -> .active class applied to current word and line
 ✔ Scroll synchronization   -> centers active lyric in container
 ✔ Bounded skip behavior    -> prevents seeking below 0 or beyond duration
 ✔ Mobile responsiveness    -> media queries adjust controls and spacing
