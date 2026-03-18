@@ -1,4 +1,4 @@
-﻿// Karaoke-style Lyrics Auto-Scroll and Per-Lyric Highlight
+// Karaoke-style Lyrics Auto-Scroll and Per-Lyric Highlight
 
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.querySelector('.custom_audio');
